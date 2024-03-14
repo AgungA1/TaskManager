@@ -44,11 +44,11 @@ class TaskManager:
 ```
 Penjelasan:
 
-1. `class TaskManager`: Ini adalah definisi kelas TaskManager.
+1. `class TaskManager`: Inisialisasi class TaskManager.
 
-2. `_instance = None`: Variabel kelas yang digunakan untuk menyimpan instance tunggal dari kelas TaskManager.
+2. `_instance = None`: Variabel class yang digunakan untuk menyimpan instance tunggal dari Class TaskManager.
 
-3. `def __new__(cls, *args, **kwargs)`: Metode khusus `__new__` dipanggil saat mencoba membuat instance kelas. Di sini, kita memeriksa apakah `_instance` sudah ada. Jika belum, kita membuat instance menggunakan `super().__new__(cls)` dan menyimpannya di `_instance`. Jika sudah ada, kita hanya mengembalikan instance yang sudah ada.
+3. `def __new__(cls, *args, **kwargs)`: Method khusus `__new__` dipanggil saat mencoba membuat instance class. Di method ini memeriksa apakah `_instance` sudah ada. Apabila belum, perlu membuat instance menggunakan `super().__new__(cls)` dan menyimpannya di `_instance`. Jika sudah ada, maka hanya mengembalikan instance yang sudah ada.
 
 
 ```python
@@ -61,8 +61,8 @@ def __init__(self, data_file):
 
 Penjelasan:
 
-1. `def __init__(self, data_file)`: Metode inisialisasi kelas yang dipanggil setelah instance dibuat. Di sini, kita menggunakan atribut `initialized` untuk memeriksa apakah inisialisasi kelas sudah dilakukan sebelumnya.
+1. `def __init__(self, data_file)`: Method inisialisasi class yang dipanggil setelah instance dibuat. Di method ini menggunakan atribut `initialized` untuk memeriksa apakah inisialisasi kelas sudah dilakukan sebelumnya.
 
-2. `if not hasattr(self, 'initialized')`: Kita memeriksa apakah atribut `initialized` sudah ada di dalam instance saat ini. Jika tidak, artinya inisialisasi belum dilakukan sebelumnya, dan kita melanjutkan dengan inisialisasi kelas.
+2. `if not hasattr(self, 'initialized')`:  Memeriksa apakah atribut `initialized` sudah ada di dalam instance saat ini. Jika tidak, artinya inisialisasi belum dilakukan sebelumnya, dan  melanjutkan dengan inisialisasi class.
 
-3. Jika inisialisasi belum dilakukan, kita mengatur atribut `data_file` untuk menyimpan lokasi file data, memuat daftar tugas menggunakan metode `load_tasks()`, dan mengatur `initialized` ke `True` untuk menandai bahwa inisialisasi telah selesai.
+3. Jika inisialisasi belum dilakukan, maka perlu mengatur atribut `data_file` untuk menyimpan lokasi file data, memuat daftar tugas menggunakan metode `load_tasks()`, dan mengatur `initialized` ke `True` untuk menandai bahwa inisialisasi telah selesai.
