@@ -1,0 +1,22 @@
+[
+    {
+        "title": "makan",
+        "completed": true
+    },
+    {
+        "title": "makan",
+        "completed": false
+    },
+    {
+        "title": "mandi",
+        "completed": true
+    },
+    {
+        "title": "Task 2",
+        "completed": false
+    },
+    {
+        "title": "Task 2",
+        "completed": true
+    }
+]
